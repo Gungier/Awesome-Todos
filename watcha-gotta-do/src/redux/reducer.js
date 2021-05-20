@@ -15,10 +15,15 @@ const addTodoReducer = createSlice({
             state.push(action.payload);
             return state;
         },
+        //remove from todo list
+        removeTodos: (state, action) => {
+            return state.filter(item => item.id !== action.payload);
+        },
+        //update todos
     },
 });
 
-export const { addTodos } = addTodoReducer.actions;
+export const { addTodos, removeTodos } = addTodoReducer.actions;
 export const reducer = addTodoReducer.reducer;
 
 //next create store and pass this reducer...
