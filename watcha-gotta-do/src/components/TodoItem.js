@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
+import Button from "@material-ui/core/Button";
 
+//import useRef hook
 const TodoItem = (props) => {
   const { item, updateTodo, removeTodo, completeTodo } = props;
 
@@ -25,9 +27,9 @@ const TodoItem = (props) => {
         onKeyPress={(e) => update(item.id, inputRef.current.value, e)}
       />
       <div className="btns">
-        <button onClick={() => changFocus()}>Edit</button>
-        <button onClick={() => completeTodo(item.id)}>Completed</button>
-        <button onClick={() => removeTodo(item.id)}>Delete</button>{" "}
+        <Button onClick={() => changFocus()}>Edit</Button>
+        <Button onClick={() => completeTodo(item.id)}>Completed</Button>
+        <Button onClick={() => removeTodo(item.id)}>Delete</Button>{" "}
       </div>
       {item.completed && <span className="completed">Done</span>}
     </li>

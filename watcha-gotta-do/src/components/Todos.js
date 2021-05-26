@@ -6,6 +6,7 @@ import {
   updateTodos,
   completeTodos,
 } from "../redux/reducer";
+import { GoPlus } from "react-icons/go";
 
 const mapStateToProps = (state) => {
   return {
@@ -25,7 +26,6 @@ const mapDispatchToProps = (dispatch) => {
 const Todos = (props) => {
   const [todo, setTodo] = useState("");
   //one input with a handleChange method & one button...
-  
 
   const handleChange = (e) => {
     setTodo(e.target.value);
@@ -47,7 +47,7 @@ const Todos = (props) => {
             completed: false,
           })
         }>
-        Add
+        <GoPlus />
       </button>
       <br />
       {/* <ul>

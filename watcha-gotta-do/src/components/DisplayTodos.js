@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+//imported useState hook
 import { connect } from "react-redux";
 import {
   addTodos,
@@ -23,6 +24,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 const DisplayTodos = (props) => {
+    //below is a react hook
   const [sort, setSort] = useState("active");
   return (
     <div className="dsiplayTodos">
